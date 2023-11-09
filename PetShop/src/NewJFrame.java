@@ -41,7 +41,6 @@ public class NewJFrame extends javax.swing.JFrame {
         getContentPane().add(BackgroundMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 1030, 840));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/istockphoto-1362791260-2048x2048.jpg"))); // NOI18N
-        Background.setMaximumSize(new java.awt.Dimension(2048, 1365));
         Background.setNextFocusableComponent(BackgroundMain);
         Background.setPreferredSize(new java.awt.Dimension(1980, 1080));
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 2040, -1));
