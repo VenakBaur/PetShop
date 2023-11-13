@@ -56,17 +56,29 @@ public class MainMenu extends javax.swing.JFrame {
         Background.setPreferredSize(new java.awt.Dimension(1980, 1080));
 
         jMenuCadastro.setText("Cadastros");
+        jMenuCadastro.setToolTipText(getName());
+        jMenuCadastro.setName("Cadastros"); // NOI18N
 
         jMenuItem1.setText("Clientes");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenuCadastro.add(jMenuItem1);
 
         jMenuItem2.setText("Pets");
         jMenuCadastro.add(jMenuItem2);
 
         jMenuBar1.add(jMenuCadastro);
+        jMenuCadastro.getAccessibleContext().setAccessibleDescription("Cadastros");
+        jMenuCadastro.getAccessibleContext().setAccessibleParent(jMenuCadastro);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Serviços");
         jMenuBar1.add(jMenu2);
+        jMenu2.getAccessibleContext().setAccessibleName("Serviços");
+        jMenu2.getAccessibleContext().setAccessibleDescription("Serviços");
+        jMenu2.getAccessibleContext().setAccessibleParent(jMenu2);
 
         setJMenuBar(jMenuBar1);
 
@@ -94,6 +106,10 @@ public class MainMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -119,6 +135,9 @@ public class MainMenu extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
