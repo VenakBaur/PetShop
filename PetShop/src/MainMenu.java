@@ -33,7 +33,9 @@ public class MainMenu extends javax.swing.JFrame {
         menu4 = new java.awt.Menu();
         Background = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        jMenuCadastro = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         menu1.setLabel("File");
@@ -53,8 +55,15 @@ public class MainMenu extends javax.swing.JFrame {
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/istockphoto-1362791260-2048x2048.jpg"))); // NOI18N
         Background.setPreferredSize(new java.awt.Dimension(1980, 1080));
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        jMenuCadastro.setText("Cadastros");
+
+        jMenuItem1.setText("Clientes");
+        jMenuCadastro.add(jMenuItem1);
+
+        jMenuItem2.setText("Pets");
+        jMenuCadastro.add(jMenuItem2);
+
+        jMenuBar1.add(jMenuCadastro);
 
         jMenu2.setText("Edit");
         jMenuBar1.add(jMenu2);
@@ -122,9 +131,11 @@ public class MainMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenuCadastro;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private java.awt.Menu menu1;
     private java.awt.Menu menu2;
     private java.awt.Menu menu3;
