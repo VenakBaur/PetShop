@@ -9,3 +9,9 @@ Serviços PetShop
 Faturamento
 
 Relatorio
+
+----------------------------------
+
+Separar o codigo em classes separadas (SwitchCase)
+
+Retirar do main
