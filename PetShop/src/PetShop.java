@@ -59,11 +59,15 @@ class Consulta {
 }
 
 public class PetShop {
+    
+    static int numClientes = 0;
+    static Cliente[] clientes = new Cliente[100]; // Pode ajustar o tamanho 
+    
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Cliente[] clientes = new Cliente[100]; // Pode ajustar o tamanho 
-        int numClientes = 0;
+        
+        
 
         ArrayList<Consulta> consultasAgendadas = new ArrayList<>();
 
@@ -93,15 +97,7 @@ public class PetShop {
             switch (opcao) {
                 case 1:
                     // Cadastro de Cliente
-                    String nomeCliente = JOptionPane.showInputDialog("Digite o nome do cliente:");
-                    String enderecoCliente = JOptionPane.showInputDialog("Digite o endereço do cliente:");
-                    String telefoneCliente = JOptionPane.showInputDialog("Digite o telefone do cliente:");
-                    String informacoesContatoCliente = JOptionPane.showInputDialog("Digite informações de contato do cliente:");
-
-                    Cliente novoCliente = new Cliente(nomeCliente, enderecoCliente, telefoneCliente, informacoesContatoCliente);
-                    clientes[numClientes] = novoCliente;
-                    numClientes++;
-                    JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso.");
+                    cadastroCliente();
                     break;
                 case 2:
                     // Cadastro de Animal de Estimação
@@ -277,4 +273,49 @@ public class PetShop {
             }
         }
     }
+    
+    public static void cadastroCliente () {
+        
+         // Cadastro de Cliente
+                    String nomeCliente = JOptionPane.showInputDialog("Digite o nome do cliente:");
+                    String enderecoCliente = JOptionPane.showInputDialog("Digite o endereço do cliente:");
+                    String telefoneCliente = JOptionPane.showInputDialog("Digite o telefone do cliente:");
+                    String informacoesContatoCliente = JOptionPane.showInputDialog("Digite informações de contato do cliente:");
+
+                    Cliente novoCliente = new Cliente(nomeCliente, enderecoCliente, telefoneCliente, informacoesContatoCliente);
+                    clientes[numClientes] = novoCliente;
+                    numClientes++;
+                    JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso.");
+        
+    }
+    
+    public static void cadastroPet() {
+        // Cadastro de Animal de Estimação
+                    String nomeClienteAnimal = JOptionPane.showInputDialog("Digite o nome do cliente:");
+
+                    // Encontre o cliente com base no nome do cliente
+                    Cliente clienteDoAnimal = null;
+                    for (Cliente cliente : clientes) {
+                        if (cliente != null && cliente.nome.equals(nomeClienteAnimal)) {
+                            clienteDoAnimal = cliente;
+                            break;
+                        }
+                    }
+
+                    if (clienteDoAnimal != null) {
+                        String nomeAnimal = JOptionPane.showInputDialog("Digite o nome do animal:");
+                        String especieAnimal = JOptionPane.showInputDialog("Digite a espécie do animal:");
+                        String racaAnimal = JOptionPane.showInputDialog("Digite a raça do animal:");
+                        int idadeAnimal = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade do animal:"));
+                        String historicoMedicoAnimal = JOptionPane.showInputDialog("Digite o histórico médico do animal:");
+
+                        Animal novoAnimal = new Animal(nomeAnimal, especieAnimal, racaAnimal, idadeAnimal, historicoMedicoAnimal);
+                        clienteDoAnimal.animais[numClientes] = novoAnimal;
+                        JOptionPane.showMessageDialog(null, "Animal cadastrado com sucesso.");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Cliente não encontrado.");
+                    }
+        
+    }
+    
 }
