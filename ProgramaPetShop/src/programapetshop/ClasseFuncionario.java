@@ -43,4 +43,22 @@ public class ClasseFuncionario {
 
     }
 
+    public void setNomeFuncionario(String nomeFuncionario) {
+        this.nomeFuncionario = nomeFuncionario;
+    }
+
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
+    }
+
+    public void setEnderecoCliente(String enderecoCliente) {
+        this.enderecoCliente = enderecoCliente;
+    }
+
+    public void setTelefoneCliente(int telefoneCliente) {
+        this.telefoneCliente = telefoneCliente;
+    }
+    
+    
+
 }

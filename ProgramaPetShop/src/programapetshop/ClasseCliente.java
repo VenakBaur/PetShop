@@ -37,10 +37,28 @@ public class ClasseCliente {
 
     }
 
-    public int geTelefoneCliente() {
+    public int getTelefoneCliente() {
 
         return telefoneCliente;
 
     }
+
+    public void setNomeCliente(String nomeCliente) {
+        this.nomeCliente = nomeCliente;
+    }
+
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
+    }
+
+    public void setEnderecoCliente(String enderecoCliente) {
+        this.enderecoCliente = enderecoCliente;
+    }
+
+    public void setTelefoneCliente(int telefoneCliente) {
+        this.telefoneCliente = telefoneCliente;
+    }
+    
+    
 
 }

@@ -24,4 +24,14 @@ public class ClasseServicosRealizados {
 
     }
 
+    public void setHistoricoServicoRealizado(String historicoServicoRealizado) {
+        this.historicoServicoRealizado = historicoServicoRealizado;
+    }
+
+    public void setValoresTotais(float valoresTotais) {
+        this.valoresTotais = valoresTotais;
+    }
+    
+    
+
 }

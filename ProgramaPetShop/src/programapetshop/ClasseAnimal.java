@@ -51,4 +51,26 @@ public class ClasseAnimal {
 
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setEspecie(String especie) {
+        this.especie = especie;
+    }
+
+    public void setRaca(String raca) {
+        this.raca = raca;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public void setHistoricoMedico(String historicoMedico) {
+        this.historicoMedico = historicoMedico;
+    }
+    
+    
+
 }
