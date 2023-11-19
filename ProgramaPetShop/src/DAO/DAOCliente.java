@@ -20,9 +20,9 @@ public class DAOCliente {
         try {
             ps = ConnectionFactory.getConnection().prepareStatement(sql);
             ps.setString(1, cliente.getNomeCliente());
-            ps.setString(1, cliente.getCPF());
-            ps.setString(1, cliente.getEnderecoCliente());
-            ps.setInt(1, cliente.getTelefoneCliente());
+            ps.setString(2, cliente.getCPF());
+            ps.setString(3, cliente.getEnderecoCliente());
+            ps.setLong(4, cliente.getTelefoneCliente());
             
             ps.execute();
             ps.close();

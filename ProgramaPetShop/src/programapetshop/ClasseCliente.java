@@ -6,7 +6,7 @@ public class ClasseCliente {
     private String nomeCliente;
     private String CPF;
     private String enderecoCliente;
-    private int telefoneCliente;
+    private long telefoneCliente;
 
     //Construtor da ClassePessoa
     public ClasseCliente(String nome, String CPF, String enderecoCLiente, int telefoneCliente) {
@@ -37,7 +37,7 @@ public class ClasseCliente {
 
     }
 
-    public int getTelefoneCliente() {
+    public long getTelefoneCliente() {
 
         return telefoneCliente;
 
@@ -55,7 +55,7 @@ public class ClasseCliente {
         this.enderecoCliente = enderecoCliente;
     }
 
-    public void setTelefoneCliente(int telefoneCliente) {
+    public void setTelefoneCliente(long telefoneCliente) {
         this.telefoneCliente = telefoneCliente;
     }
     
