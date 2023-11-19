@@ -60,5 +60,21 @@ public class ProgramaPetShop {
         new DAOCliente().cadastrarCliente(c);
 
     }
+    
+    public static void animalCadastro() {
+        
+        String nomearAnimal = "";
+        String especieAnimal = "";
+        String raca = "";
+        int idade = 0;
+        String historicoMedico = "";
+        
+        nomearAnimal = JOptionPane.showInputDialog("Digite o nome do pet");
+        especieAnimal = JOptionPane.showInputDialog("Digite a especie do pet");
+        raca = JOptionPane.showInputDialog("Digite a raca do pet");
+        idade = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade em meses do pet"));        
+        historicoMedico = ("Historico do pet pode afetar em algum serviço do pet shop");
+        
+    }
 
 }

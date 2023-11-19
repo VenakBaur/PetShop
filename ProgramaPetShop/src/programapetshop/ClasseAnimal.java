@@ -33,7 +33,7 @@ public class ClasseAnimal {
 
     }
 
-    public String gerRaca() {
+    public String getRaca() {
 
         return raca;
 
