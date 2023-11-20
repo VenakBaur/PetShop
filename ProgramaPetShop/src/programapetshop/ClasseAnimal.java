@@ -8,15 +8,17 @@ public class ClasseAnimal {
     private String raca;
     private int idade;
     private String historicoMedico;
+    private String tutor;
 
     //Construtor da ClasseAnimal
-    public ClasseAnimal(String nome, String especie, String raca, int idade, String historicoMedico) {
+    public ClasseAnimal(String nome, String especie, String raca, int idade, String historicoMedico, String tutor) {
 
         this.nome = nome;
         this.especie = especie;
         this.raca = raca;
         this.idade = idade;
         this.historicoMedico = historicoMedico;
+        this.tutor = tutor;
 
     }
 
@@ -51,6 +53,10 @@ public class ClasseAnimal {
 
     }
 
+    public String getTutor() {
+        return tutor;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -70,7 +76,9 @@ public class ClasseAnimal {
     public void setHistoricoMedico(String historicoMedico) {
         this.historicoMedico = historicoMedico;
     }
-    
-    
+
+    public void setTutor(String tutor) {
+        this.tutor = tutor;
+    }
 
 }

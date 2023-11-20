@@ -1,57 +1,63 @@
 package programapetshop;
 
+import java.sql.Timestamp;
+
 public class ClasseServicos {
-    
+
     //Atributos privados da classe
     private String nomeServico;
     private float precoServico;
-    private float duracaoServico;
-    private String historicoServico;
+    private String dataServico;
 
     public ClasseFuncionario getFuncionario() {
-        
+
         return funcionario;
-        
+
     }
 
     public void setFuncionario(ClasseFuncionario funcionario) {
         this.funcionario = funcionario;
     }
     private ClasseFuncionario funcionario;
-    
+
     //Construtor da ClasseFuncionario
-    public ClasseServicos(String nomeServico, float precoServico, float duracaoServico, String historicoServico) {
+    public ClasseServicos(String nomeServico, float precoServico, String dataServico) {
 
         this.nomeServico = nomeServico;
         this.precoServico = precoServico;
-        this.duracaoServico = duracaoServico;
-        this.historicoServico = historicoServico;
+        this.dataServico = dataServico;
 
     }
-    
+
     //Getters (servem para coletar a informação do atributo)
     public String getNomeServico() {
-        
+
         return nomeServico;
-        
+
     }
-    
+
     public float getPrecoServico() {
-        
+
         return precoServico;
-        
+
     }
-    
-    public float getDuracaoServico() {
-        
-        return duracaoServico;
-        
+
+    public String getDataServico() {
+
+        return dataServico;
+
     }
-    
-    public String getHistoricoServico() {
-        
-        return historicoServico;
-        
+
+    public void setNomeServico(String nomeServico) {
+        this.nomeServico = nomeServico;
+    }
+
+    public void setPrecoServico(float precoServico) {
+        this.precoServico = precoServico;
+    }
+
+    public void setDataServico(String dataServico) {
+        this.dataServico = dataServico;
     }
 
 }

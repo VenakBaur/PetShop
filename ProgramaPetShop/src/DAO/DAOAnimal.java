@@ -9,9 +9,9 @@ import programapetshop.ConnectionFactory;
 
 public class DAOAnimal {
 
-    public void cadastrarCliente(ClasseAnimal animal) {
+    public void cadastrarAnimal(ClasseAnimal animal) {
 
-        String sql = "INSERT INTO animal(nome, especie, raca, idade, historicoMedico) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO animal(nome, especie, raca, idade, historicoMedico, tutor) VALUES (?, ?, ?, ?, ?, ?)";
 
         PreparedStatement ps = null;
 
@@ -22,6 +22,7 @@ public class DAOAnimal {
             ps.setString(3, animal.getRaca());
             ps.setLong(4, animal.getIdade());
             ps.setString(5, animal.getHistoricoMedico());
+            ps.setString(6, animal.getTutor());
 
             ps.execute();
             ps.close();
